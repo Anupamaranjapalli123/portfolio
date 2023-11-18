@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anupama Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png.png" class="logo.png.png" width="80" height="80">
+            <ul id="sidemenu">
+                <li> <a href="#header">Home</a></li>
+                <li> <a href="#about">About</a></li>
+                <li> <a href="#portfolio">Portfolio</a></li>
+                <li> <a href="#contact">contact</a></li>
+                <i class="fa fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p> Software Developer</p>
+            <h1>Hi, I'm<span> Anupama Ranjapalli</span><br> From India</h1>
+        </div>
+    </div>
+
+</div>
+
+<div id="about">
+    <div id="header">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title"> About Me</h1>
+                <p class="sub-title1">Hi, i am Anupama Ranjapalli, i am the fresher in the field of software developer.My passion lies in 
+                creating captivating website design and implementing them through the frontend development and also i have a 
+                knowledge about the python programming language and implementing them through the backend development.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li>Python Progarmming Language</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Basics of C programming</li>
+                        <li>Basics of C++ Programming</li>
+                        <li>Cloud Computing: AWS</li>
+                        <li>DevOps Tools: Git, Jenkins, Docker and Kubernetes</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li>I am the Fresher in the Field of Software Development</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li>2015-2018<br>Bachelor of Engineering</li>
+                        <li>2012-2015<br>Diploma</li>
+                        <li>2011-2012<br>SSlc</li>
+                </div>
+            </div>
+         </div>
+        
+        
+    </div>
+    
+</div>
+</div>
+
+<div id="portfolio">
+    <div id="header">
+       <div class="container">
+        <div class="row">
+            <div class="portfolio-col-1">
+                <img src="images/work1.png.jpg">
+            </div>
+            <div class="portfolio-col-2">
+                <h2 class="sub-title">My Work</h2>
+                <p class="sub-title1"> This project aims to develop a versatile chatbot using Python and OpenAI's GPT-3 model. The chatbot
+                will be capable of engaging in natural and context-aware conversations with users, opening up opportunities
+                for a wide range of applications such as customer support, virtual assistants, and more By leveraging the power 
+                of GPT-3, this project will harness the capabilities of one of the most advanced language models in AI.</p>
+            </div>
+
+        </div>
+       </div>
+
+    </div>
+
+</div>
+<div id="contact">
+    <div id="header">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title"> Contact Me</h1>
+                    <p><i class="fa fa-paper-plane"></i>ranjapallianupama@gmail.com</p>
+                    <p><i class="fa fa-phone"></i>7760710731</p>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100087314603421&mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/anupama-ranjapalli-b07961270/"><i class="fa-brands fa-linkedin"></i></a>
+
+                </div>
+                <div>
+                    <a href="images/my-cv.pdf.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" row="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+    }
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzgxoisW1Jr2k-3m8MkzwzQqxt4h_L_2w_xoP9uw32lIMsjjnnEXK-9cYeFpn3IGpHTpg/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => { 
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
